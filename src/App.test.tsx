@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import App from "../App";
-import { useSocket } from "../hooks/socket";
+import App from "./App";
+import { useSocket } from "./hooks/socket";
 
 jest.mock("../hooks/socket");
 
