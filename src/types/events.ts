@@ -1,9 +1,8 @@
-import { Calculation } from "./type";
+import { CommandResponse } from "./type";
 
 export interface ServerToClientEvents {
-  result: (result: Calculation) => void;
-  calculations: (calculations: Calculation[]) => void;
-  error: (errorMessage: string) => void;
+  calculations: (response: CommandResponse) => void;
+  error: (exception: CommandResponse) => void;
 }
 
 export interface ClientToServerEvents {

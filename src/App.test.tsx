@@ -16,6 +16,7 @@ describe("App", () => {
     };
 
     (useSocket as jest.Mock).mockReturnValue(mockSocket);
+    window.HTMLElement.prototype.scrollIntoView = function () {};
   });
 
   it("should render Title component", () => {

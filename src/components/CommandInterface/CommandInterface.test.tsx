@@ -1,5 +1,5 @@
 import { render, fireEvent, waitFor } from "@testing-library/react";
-import CommandInterface from "../CommandInterface";
+import CommandInterface from "./CommandInterface";
 import { useSocket } from "../../hooks/socket";
 
 jest.mock("../../hooks/socket");
@@ -15,6 +15,7 @@ describe("CommandInterface", () => {
     };
 
     (useSocket as jest.Mock).mockReturnValue(mockSocket);
+    window.HTMLElement.prototype.scrollIntoView = function () {};
   });
 
   it("connects to the socket when the component is mounted", () => {

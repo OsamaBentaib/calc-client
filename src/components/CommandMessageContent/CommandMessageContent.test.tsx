@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import CommandMessageContent from "../CommandMessageContent";
+import CommandMessageContent from "./CommandMessageContent";
 
 describe("CommandMessageContent", () => {
   it("should render calculation and result", () => {
@@ -13,10 +13,7 @@ describe("CommandMessageContent", () => {
 
     render(<CommandMessageContent item={item} />);
 
-    const calculationElement = screen.getByText("2+2");
-    const resultElement = screen.getByText("4");
-
-    expect(calculationElement).toBeInTheDocument();
-    expect(resultElement).toBeInTheDocument();
+    expect(screen.getByText("18-07-2023 01:00")).toBeInTheDocument();
+    expect(screen.getByText("4")).toBeInTheDocument();
   });
 });

@@ -1,6 +1,6 @@
-import Title from "./components/Title";
-import Background from "./components/Background";
-import CommandInterface from "./components/CommandInterface";
+import Title from "./components/Title/Title";
+import Background from "./components/Background/Background";
+import CommandInterface from "./components/CommandInterface/CommandInterface";
 
 function App() {
   return (
